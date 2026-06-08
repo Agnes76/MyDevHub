@@ -1,0 +1,235 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="bg-primary text-white p-5 rounded-4 mb-4">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <h1 class="display-5 fw-bold">
+                Welcome to My Portfolio
+            </h1>
+
+            <p class="lead">
+                Backend Developer specializing in C#, ASP.NET Core,
+                Azure, SQL Server, CQRS, and Event-Driven Architecture.
+            </p>
+
+            <a asp-controller="Home"
+               asp-action="MyCv"
+               class="btn btn-light me-2">
+                View CV
+            </a>
+
+            <a asp-controller="Home"
+               asp-action="Contact"
+               class="btn btn-outline-light">
+                Contact Me
+            </a>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <img src="~/images/profile.png"
+                 class="img-fluid rounded-circle shadow"
+                 width="200" />
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+
+    <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+
+                <div class="display-4 mb-3">📄</div>
+
+                <h5>My CV</h5>
+
+                <p class="text-muted">
+                    View my professional experience,
+                    skills and qualifications.
+                </p>
+
+                <a asp-controller="Home"
+                   asp-action="MyCv"
+                   class="btn btn-primary">
+                    Open
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+
+                <div class="display-4 mb-3">💰</div>
+
+                <h5>Tax Calculator</h5>
+
+                <p class="text-muted">
+                    Calculate Nigerian PAYE tax using
+                    progressive tax bands.
+                </p>
+
+                <a asp-controller="Home"
+                   asp-action="CalTax"
+                   class="btn btn-success">
+                    Calculate
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+
+                <div class="display-4 mb-3">💼</div>
+
+                <h5>Projects</h5>
+
+                <p class="text-muted">
+                    Explore applications and systems
+                    I have built.
+                </p>
+
+                <a asp-controller="Home"
+                   asp-action="Privacy"
+                   class="btn btn-dark">
+                    View Projects
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+
+                <div class="display-4 mb-3">📬</div>
+
+                <h5>Contact</h5>
+
+                <p class="text-muted">
+                    Send a message or discuss
+                    opportunities.
+                </p>
+
+                <a asp-controller="Home"
+                   asp-action="Contact"
+                   class="btn btn-warning">
+                    Contact Me
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card shadow-sm mb-5">
+    <div class="card-body">
+
+        <h3 class="mb-4">Technical Skills</h3>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h6>C# / .NET Core</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar"
+                         style="width:90%">
+                        90%
+                    </div>
+                </div>
+
+                <h6>SQL Server</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar"
+                         style="width:85%">
+                        85%
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <h6>Azure</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar"
+                         style="width:80%">
+                        80%
+                    </div>
+                </div>
+
+                <h6>Microservices & CQRS</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar"
+                         style="width:85%">
+                        85%
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        <h3 class="mb-4">Featured Projects</h3>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="border rounded p-3 h-100">
+
+                    <h5>HR & Payroll System</h5>
+
+                    <p>
+                        Payroll processing, tax calculations,
+                        employee management and reporting.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="border rounded p-3 h-100">
+
+                    <h5>Tax Calculator</h5>
+
+                    <p>
+                        Nigerian PAYE calculator using
+                        tax bands and CRA deductions.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="border rounded p-3 h-100">
+
+                    <h5>Portfolio Website</h5>
+
+                    <p>
+                        ASP.NET Core application hosted
+                        on Azure App Service.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

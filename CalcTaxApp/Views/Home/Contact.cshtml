@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Contact Me";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <div class="card shadow border-0">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">Contact Me</h2>
+                </div>
+
+                <div class="card-body p-4">
+
+                    <p class="text-muted mb-4">
+                        Have a project, job opportunity, or question? Send me a message and I'll get back to you as soon as possible.
+                    </p>
+
+                    <form method="post">
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">First Name</label>
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Enter first name" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Last Name</label>
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Enter last name" />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email"
+                                   class="form-control"
+                                   placeholder="example@email.com" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Subject</label>
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Message subject" />
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control"
+                                      rows="6"
+                                      placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                Send Message
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="card mt-4 shadow-sm border-0">
+                <div class="card-body">
+
+                    <h4>Other Ways to Reach Me</h4>
+
+                    <hr />
+
+                    <div class="row">
+
+                        <div class="col-md-4 mb-3">
+                            <strong>Email</strong>
+                            <p class="text-muted mb-0">
+                                yourname@email.com
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <strong>LinkedIn</strong>
+                            <p class="text-muted mb-0">
+                                linkedin.com/in/yourprofile
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <strong>GitHub</strong>
+                            <p class="text-muted mb-0">
+                                github.com/yourusername
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

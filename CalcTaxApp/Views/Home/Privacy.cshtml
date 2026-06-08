@@ -1,0 +1,219 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container py-5">
+
+    <!-- Page Header -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">Projects & Technical Articles</h1>
+
+        <p class="lead text-muted">
+            A showcase of my software engineering projects,
+            architecture decisions, and technical write-ups.
+        </p>
+    </div>
+
+    <!-- Featured Project -->
+    <div class="card shadow-lg border-0 mb-5">
+        <div class="card-body p-5">
+
+            <span class="badge bg-primary mb-3">
+                Featured Project
+            </span>
+
+            <h2>HR & Payroll Management System</h2>
+
+            <p class="text-muted">
+                Enterprise payroll platform built using
+                ASP.NET Core, EF Core, SQL Server,
+                CQRS, and Event-Driven Architecture.
+            </p>
+
+            <ul>
+                <li>Employee Management</li>
+                <li>Payroll Processing</li>
+                <li>Tax Calculations</li>
+                <li>Reporting Dashboard</li>
+                <li>Kafka Integration</li>
+            </ul>
+
+            <a href="#" class="btn btn-primary">
+                Read Case Study
+            </a>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <h2 class="mb-4">Projects</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <span class="badge bg-success mb-2">
+                        ASP.NET Core
+                    </span>
+
+                    <h4>Tax Calculator</h4>
+
+                    <p>
+                        Nigerian PAYE calculator implementing
+                        tax bands and consolidated relief allowance.
+                    </p>
+
+                    <a href="#" class="btn btn-outline-primary">
+                        View Project
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <span class="badge bg-info mb-2">
+                        Azure
+                    </span>
+
+                    <h4>Online CV</h4>
+
+                    <p>
+                        Professional portfolio website hosted
+                        on Azure App Service.
+                    </p>
+
+                    <a href="#" class="btn btn-outline-primary">
+                        View Project
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <span class="badge bg-warning text-dark mb-2">
+                        CQRS
+                    </span>
+
+                    <h4>Payroll Engine</h4>
+
+                    <p>
+                        Payroll processing engine supporting
+                        deductions, tax, and reporting.
+                    </p>
+
+                    <a href="#" class="btn btn-outline-primary">
+                        View Project
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Articles -->
+    <div class="mt-5">
+
+        <h2 class="mb-4">
+            Technical Articles
+        </h2>
+
+        <div class="list-group shadow-sm">
+
+            <a href="#"
+               class="list-group-item list-group-item-action">
+
+                <h5>
+                    Building a Payroll System with ASP.NET Core
+                </h5>
+
+                <small class="text-muted">
+                    Learn how payroll calculations were implemented.
+                </small>
+
+            </a>
+
+            <a href="#"
+               class="list-group-item list-group-item-action">
+
+                <h5>
+                    Implementing CQRS in .NET Applications
+                </h5>
+
+                <small class="text-muted">
+                    Why CQRS improves maintainability and scalability.
+                </small>
+
+            </a>
+
+            <a href="#"
+               class="list-group-item list-group-item-action">
+
+                <h5>
+                    Azure Deployment Using GitHub Actions
+                </h5>
+
+                <small class="text-muted">
+                    CI/CD pipeline for ASP.NET Core applications.
+                </small>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container py-5">
+
+    <h1>
+        Building a Payroll System with ASP.NET Core
+    </h1>
+
+    <p class="text-muted">
+        Published May 2026 • 5 min read
+    </p>
+
+    <hr />
+
+    <p>
+        Payroll systems are responsible for calculating
+        employee earnings, deductions, taxes, and net pay.
+    </p>
+
+    <h3>Architecture</h3>
+
+    <p>
+        The solution was implemented using ASP.NET Core,
+        Entity Framework Core and SQL Server.
+    </p>
+
+    <h3>Challenges</h3>
+
+    <p>
+        One challenge was implementing Nigerian PAYE tax
+        calculations while ensuring maintainability.
+    </p>
+
+    <h3>Solution</h3>
+
+    <p>
+        The tax calculation logic was isolated into a
+        dedicated service layer following SOLID principles.
+    </p>
+
+</div>

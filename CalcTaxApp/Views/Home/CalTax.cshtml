@@ -1,0 +1,177 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "CalTax";
+}
+
+
+@model NigeriaTaxViewModel
+
+<div class="container py-5">
+
+    <!-- HERO HEADER -->
+    <div class="text-black rounded-4 shadow p-5 mb-5">
+
+        <h1 class="fw-bold">Nigeria Tax Calculator</h1>
+
+        <p class="lead mb-0">
+            Calculate PAYE tax using progressive tax bands and consolidated relief allowance.
+        </p>
+
+    </div>
+
+    <!-- INPUT SECTION -->
+    <div class="card shadow-sm border-0 mb-4">
+
+        <div class="card-header text-black">
+            <h4 class="mb-0">Enter Income Details</h4>
+        </div>
+
+        <div class="card-body">
+
+            <form method="post">
+
+                <div class="row align-items-end">
+
+                    <div class="col-md-8">
+
+                        <label class="form-label">Gross Income (₦)</label>
+
+                        <input type="number"
+                               class="form-control form-control-lg"
+                               asp-for="GrossIncome"
+                               placeholder="e.g. 500000" />
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <button type="submit"
+                                class="btn btn-primary btn-lg w-100">
+                            Calculate Tax
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    @if (Model != null && Model.GrossIncome > 0)
+    {
+        <!-- BREAKDOWN SECTION -->
+        <div class="card shadow-sm border-0 mb-4">
+
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Tax Breakdown</h4>
+            </div>
+
+            <div class="card-body">
+
+                <div class="row g-3">
+
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded bg-light">
+                            <h6>Gross Income</h6>
+                            <h4>₦@Model.GrossIncome</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded bg-light">
+                            <h6>CRA (Relief)</h6>
+                            <h4>₦@Model.CRA</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded bg-light">
+                            <h6>Taxable Income</h6>
+                            <h4>₦@Model.TaxableIncome</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RESULT SECTION -->
+        <div class="row g-4">
+
+            <div class="col-md-6">
+
+                <div class="card shadow-sm border-0 h-100">
+
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Total Tax</h5>
+                    </div>
+
+                    <div class="card-body text-center">
+
+                        <h2 class="text-danger">
+                            ₦@Model.Tax
+                        </h2>
+
+                        <p class="text-muted">
+                            Total PAYE deducted based on tax bands
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="card shadow-sm border-0 h-100">
+
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Net Salary</h5>
+                    </div>
+
+                    <div class="card-body text-center">
+
+                        <h2 class="text-success">
+                            ₦@Model.NetIncome
+                        </h2>
+
+                        <p class="text-muted">
+                            Take-home pay after deductions
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- INFO FOOTER -->
+        <div class="alert alert-info mt-4">
+
+            <strong>Note:</strong>
+            This calculation includes CRA (Consolidated Relief Allowance)
+            and progressive tax bands as defined in Nigerian PAYE system.
+
+        </div>
+    }
+
+</div>
+
+@if (Model.Tax > 0 || Model.CRA > 0)
+{
+    <hr />
+
+    <p><strong>Gross Income:</strong> ₦@Model.GrossIncome</p>
+    <p><strong>CRA:</strong> ₦@Model.CRA</p>
+    <p><strong>Taxable Income:</strong> ₦@Model.TaxableIncome</p>
+    <p><strong>Tax:</strong> ₦@Model.Tax</p>
+    <p><strong>Net Income:</strong> ₦@(Model.NetIncome)</p>
+}
