@@ -54,7 +54,7 @@ jobs:
             ${{ runner.os }}-nuget-
 
       - name: Restore
-        run: dotnet restore ${{env.SOLUTION_PATH}} --configuration Release
+        run: dotnet restore ${{env.SOLUTION_PATH}}
 
       - name: Build with dotnet
         run: dotnet build ${{env.SOLUTION_PATH}} --configuration Release --no-restore
