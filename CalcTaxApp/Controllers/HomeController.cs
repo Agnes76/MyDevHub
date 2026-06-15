@@ -1,8 +1,9 @@
 ﻿using CalcTaxApp.Models;
 using CalcTaxApp.Services;
 using Microsoft.AspNetCore.Mvc;
+using MyDevHub.Models;
+using MyDevHub.Services;
 using System.Diagnostics;
-using System.Reflection;
 
 namespace CalcTaxApp.Controllers
 {
@@ -10,6 +11,7 @@ namespace CalcTaxApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ITaxService _taxService;
+       
 
         public HomeController(ILogger<HomeController> logger, ITaxService taxService)
         {
@@ -84,6 +86,31 @@ namespace CalcTaxApp.Controllers
 
             return View("Index");
         }
+
+        //[HttpGet]
+        //public IActionResult UploadImage()
+        //{
+        //    var uploadPath = Path.Combine(
+        //        //_webHostEnvironment.WebRootPath,
+        //        "uploads");
+
+        //    if (!Directory.Exists(uploadPath))
+        //    {
+        //        Directory.CreateDirectory(uploadPath);
+        //    }
+
+        //    var images = Directory
+        //        .GetFiles(uploadPath)
+        //        .Select(Path.GetFileName)
+        //        .ToList();
+
+        //    return View(new GalleryViewModel
+        //    {
+        //        Images = images
+        //    });
+        //}
+
+        
 
         private string ExtractTextFromWord(string filePath)
         {

@@ -1,10 +1,20 @@
 using CalcTaxApp.Services;
+using Microsoft.EntityFrameworkCore;
+using MyDevHub.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString = builder.Environment.IsDevelopment() ?
+                       builder.Configuration.GetConnectionString("DefaultConnection") :
+                       builder.Configuration.GetConnectionString("RemoteConnection");
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<MyHubContext>(opt => {
+    opt.UseSqlServer(connectionString);
+});
 builder.Services.AddScoped<ITaxService, TaxService>();
+builder.Services.AddScoped<IImageService, ImageService>();
 
 var app = builder.Build();
 
