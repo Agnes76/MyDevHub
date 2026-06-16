@@ -27,7 +27,7 @@ env:
 
 on:
   push:
-    branches: [ "ft-uploadImages" ]
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
